@@ -210,7 +210,7 @@
             </div>
 
             <!-- Action Buttons -->
-            <div class="button-group">
+            <div class="button-group" style="display: none;">
                 <button class="btn btn-secondary" onclick="addToCalendar()">Add to Calendar</button>
             </div>
         </div>
@@ -252,9 +252,14 @@
     <div class="bottom-nav">
         <a href="#header" class="nav-item active">Invitation</a>
         <button class="nav-item" onclick="scrollToVenue()">Venue</button>
-        <button class="nav-item" onclick="addToCalendar()">Calendar</button>
+        <button class="nav-item" onclick="addToCalendar()" style="display: none;">Calendar</button>
         <button class="nav-item" onclick="shareInvitation()">Share</button>
     </div>
+
+    <!-- Mute/Unmute Button -->
+    <button id="muteBtn" class="mute-btn" onclick="toggleMute()">
+        <span class="mute-icon">🔊</span>
+    </button>
 
     <script>
         // Countdown Timer Function
@@ -388,6 +393,24 @@ END:VCALENDAR`;
                 const url = window.location.href;
                 const text = 'Check out this beautiful wedding invitation: ' + url;
                 alert('Share this link:\n\n' + url);
+            }
+        }
+
+        // Mute/Unmute Toggle
+        let isMuted = false;
+        function toggleMute() {
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            const muteBtn = document.getElementById('muteBtn');
+            const muteIcon = muteBtn.querySelector('.mute-icon');
+
+            if (isMuted) {
+                backgroundMusic.play();
+                muteIcon.textContent = '🔊';
+                isMuted = false;
+            } else {
+                backgroundMusic.pause();
+                muteIcon.textContent = '🔇';
+                isMuted = true;
             }
         }
 

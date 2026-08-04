@@ -442,9 +442,11 @@ html, body {
 
 /* Section Styling */
 .section {
-    padding: 60px 20px;
+    padding: 70px 30px;
     border-top: 2px solid rgba(96, 165, 250, 0.2);
     background: linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.03) 100%);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .section-title {
@@ -950,10 +952,13 @@ html, body {
 /* QR Code Section */
 .qr-section {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 30px;
     margin-top: 50px;
-    background: linear-gradient(135deg, rgba(90, 31, 47, 0.05) 0%, rgba(212, 165, 116, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(30, 58, 138, 0.03) 100%);
     border-top: 2px solid var(--accent-gold);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .qr-subtitle {
@@ -1161,10 +1166,13 @@ html, body {
 /* Footer */
 .footer {
     text-align: center;
-    padding: 30px 20px;
-    border-top: 1px solid rgba(212, 165, 116, 0.3);
+    padding: 50px 30px;
+    border-top: 2px solid rgba(96, 165, 250, 0.2);
     font-size: 0.85em;
     color: var(--text-muted);
+    background: linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.03) 100%);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer p {
@@ -1189,6 +1197,41 @@ html, body {
         opacity: 0;
         transform: translate(calc(var(--vx) * 100px), calc(var(--vy) * 100px)) scale(0.5) rotate(360deg);
     }
+}
+
+/* Mute Button */
+.mute-btn {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-maroon), var(--secondary-maroon));
+    border: none;
+    color: var(--light-cream);
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+}
+
+.mute-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.6);
+}
+
+.mute-btn:active {
+    transform: scale(0.95);
+}
+
+.mute-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 /* Mobile Responsive */
@@ -1327,5 +1370,18 @@ html, body {
 
     .countdown-unit {
         min-width: 65px;
+    }
+
+    /* Mobile Mute Button */
+    .mute-btn {
+        bottom: 75px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2em;
+    }
+
+    .section {
+        padding: 50px 20px;
     }
 }
