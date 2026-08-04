@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinu George & Edwina Maria - Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio Element for Background Music -->
+    <audio id="backgroundMusic" src="music/background-music.mp3" loop></audio>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            
+            <p class="loading-quote">"Love is not just about finding the right person, it's about being the right person for someone."</p>
+            <button class="open-invitation-btn" onclick="openInvitation()">Open Invitation</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section - Invitation Card -->
+        <div class="hero-card-section">
+            <div class="elegant-invitation">
+                <div class="invitation-envelope">
+                    <!-- Envelope Background -->
+                    <div class="envelope-design">
+                        <img id="coupleImage" src="assets/img1.jpg" alt="Dinu George & Edwina Maria" class="couple-photo">
+                    </div>
+
+                    <!-- Invitation Text Over Image -->
+                    <div class="invitation-text-overlay">
+                        <h2 class="invite-title">Dinu George</h2>
+                        <div class="invite-ampersand">&</div>
+                        <h2 class="invite-title">Edwina Maria</h2>
+                        <div class="divider"></div>
+                        <p class="invite-subtitle">request the pleasure of your company<br>at their marriage celebration</p>
+                    </div>
+                </div>
+            </div>
+            <p class="hero-quote">"Two souls, one heart, forever intertwined."</p>
+        </div>
+
+
+
+        <!-- Ceremony Section -->
+        <div class="section">
+            <p style="text-align: center; color: var(--primary-maroon); font-family: 'Cormorant Garamond', serif; font-size: 1.2em; font-style: italic; margin-bottom: 40px; font-weight: 300;">\"A great marriage is not when the perfect couple comes together. It is when an imperfect couple learns to enjoy their differences.\"</p>
+            <div class="section-title">Ceremony <span class="accent">Information</span></div>
+
+            <div class="parents-grid-new">
+                <div class="parent-group-left">
+                    <div class="label">Mr. & Mrs.</div>
+                    <div class="name">George Kurian</div>
+                    <div class="name">Sherly George</div>
+                    <div class="house">Muhalayil House</div>
+                </div>
+                <div class="divider-vertical"></div>
+                <div class="parent-group-right">
+                    <div class="label">Mr. & Mrs.</div>
+                    <div class="name">Raphael Cicil</div>
+                    <div class="name">Shaini Varghese</div>
+                    <div class="house">Chullickal House</div>
+                </div>
+            </div>
+
+            <div class="announcement">
+                <p>WITH JOYFUL HEARTS</p>
+                <p class="main-text">WE ANNOUNCE OUR WEDDING</p>
+            </div>
+
+            <div class="couple-info">
+                <div class="role-label">The Groom</div>
+                <div class="couple-name">Dinu George</div>
+                <div class="couple-details">Muhalayil house</div>
+                <div class="couple-parents">S/O George Kurian and Sherly George</div>
+            </div>
+
+            <div style="text-align: center; color: var(--primary-maroon); margin: 30px 0; font-size: 1.5em; font-weight: 300;">&</div>
+
+            <div class="couple-info">
+                <div class="role-label">The Bride</div>
+                <div class="couple-name">Edwina Maria</div>
+                <div class="couple-details">Chullickal house</div>
+                <div class="couple-parents">D/O Raphael Cicil and Shaini Varghese</div>
+            </div>
+        </div>
+
+        <!-- Second Image -->
+        <div class="hero-image">
+            <img id="secondImg" src="assets/img2.jpg" alt="Wedding moments">
+        </div>
+
+        <!-- Reception/Date Section -->
+        <div class="section">
+            <p style="text-align: center; color: var(--primary-maroon); font-family: 'Cormorant Garamond', serif; font-size: 1.2em; font-style: italic; margin-bottom: 40px; font-weight: 300;">\"In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.\"</p>
+            <div class="section-title">Reception <span class="accent">Details</span></div>
+
+            <div class="datetime-container">
+                <div class="datetime-label">Date & Time</div>
+                <div class="date-display">
+                    <div class="day-of-week">Saturday</div>
+                    <div>
+                        <div class="date-number">29</div>
+                    </div>
+                    <div class="month-year">
+                        <div class="month">August</div>
+                        <div class="year">2026</div>
+                    </div>
+                    <div class="time">10:30 AM</div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-label">Time Until The Big Day</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-unit">
+                            <div class="countdown-value" id="days">0</div>
+                            <div class="countdown-label-unit">Days</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-value" id="hours">0</div>
+                            <div class="countdown-label-unit">Hours</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-value" id="minutes">0</div>
+                            <div class="countdown-label-unit">Minutes</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-value" id="seconds">0</div>
+                            <div class="countdown-label-unit">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="calendar">
+                    <div class="calendar-title">August 2026</div>
+                    <div class="calendar-grid">
+                        <div class="calendar-header">M</div>
+                        <div class="calendar-header">T</div>
+                        <div class="calendar-header">W</div>
+                        <div class="calendar-header">T</div>
+                        <div class="calendar-header">F</div>
+                        <div class="calendar-header">S</div>
+                        <div class="calendar-header">S</div>
+
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+                        <div class="calendar-day highlight">29</div>
+                        <div class="calendar-day">30</div>
+
+                        <div class="calendar-day">31</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venue -->
+            <div class="venue-section">
+                <p style="text-align: center; color: var(--primary-maroon); font-family: 'Cormorant Garamond', serif; font-size: 1.1em; font-style: italic; margin-bottom: 30px; font-weight: 300;">\"The best thing to hold is each other.\"</p>
+                <div class="section-title">Venue <span class="accent">Location</span></div>
+                <div class="venue-card">
+                    <div class="venue-title">St Sebastian's Forane Church</div>
+                    <div class="venue-address">
+                        Nedumkandam<br>
+                        Kerala 685553<br>
+                        India
+                    </div>
+                    <a href="https://maps.app.goo.gl/qwuZmG6oWex9X3ry5" target="_blank" class="venue-link">View on Maps</a>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button class="btn btn-secondary" onclick="addToCalendar()">Add to Calendar</button>
+            </div>
+        </div>
+
+        <!-- QR Code Scanner Section -->
+        <div class="qr-section">
+            <div class="section-title">Share The <span class="accent">Love</span></div>
+            <p class="qr-subtitle">"Marriage is a journey together, share the joy with those you love."</p>
+            <div class="scanner-container">
+                <div class="scanner-frame">
+                    <div class="scanner-corner scanner-corner-tl"></div>
+                    <div class="scanner-corner scanner-corner-tr"></div>
+                    <div class="scanner-corner scanner-corner-bl"></div>
+                    <div class="scanner-corner scanner-corner-br"></div>
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.google.com/?q=St%20Sebastian's%20Forane%20Church%20Nedumkandam%20Kerala%20685553" alt="QR Code - Venue Location" />
+                    </div>
+                </div>
+                <p class="scanner-text">Scan to get the location</p>
+                <div class="qr-location">
+                    <div class="qr-location-title">Venue Location</div>
+                    <div class="qr-location-details">
+                        St Sebastian's Forane Church<br>
+                        Nedumkandam, Kerala 685553<br>
+                        India
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Dinu George & Edwina Maria &nbsp; | &nbsp; August 29, 2026</p>
+            <p style="margin-top: 10px;">With joy and love</p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="#header" class="nav-item active">Invitation</a>
+        <button class="nav-item" onclick="scrollToVenue()">Venue</button>
+        <button class="nav-item" onclick="addToCalendar()">Calendar</button>
+        <button class="nav-item" onclick="shareInvitation()">Share</button>
+    </div>
+
+    <script>
+        // Countdown Timer Function
+        function updateCountdown() {
+            const weddingDate = new Date(2026, 7, 29, 10, 30, 0).getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Open Invitation Button - Play Music and Show Main Page
+        function openInvitation() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+
+            // Play background music
+            backgroundMusic.play().catch(function(error) {
+                console.log('Music playback error:', error);
+            });
+
+            // Fade out loading screen
+            loadingScreen.classList.add('hidden');
+        }
+
+        // Loading Screen - Show loading for 3 seconds then show invitation
+        window.addEventListener('load', function() {
+            // Start countdown
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Don't auto-open anymore - wait for button click
+            // The button click will trigger openInvitation()
+        });
+
+        // Love Emoji Spread Effect
+        function spreadLoveEmojis(event) {
+            const emojis = ['❤️', '💕', '💖', '💗', '💝'];
+
+            // Get click position
+            const x = event.clientX;
+            const y = event.clientY;
+
+            // Create multiple emojis
+            for (let i = 0; i < 8; i++) {
+                const emoji = document.createElement('div');
+                emoji.className = 'love-emoji';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+                // Random spread direction
+                const angle = (Math.PI * 2 * i) / 8;
+                const velocity = 3 + Math.random() * 3;
+
+                emoji.style.left = x + 'px';
+                emoji.style.top = y + 'px';
+                emoji.style.setProperty('--vx', Math.cos(angle) * velocity);
+                emoji.style.setProperty('--vy', Math.sin(angle) * velocity);
+
+                document.body.appendChild(emoji);
+
+                // Remove emoji after animation
+                setTimeout(() => emoji.remove(), 1500);
+            }
+        }
+
+        // Hero card click for emoji effect
+        document.querySelector('.hero-card-section')?.addEventListener('click', function(event) {
+            spreadLoveEmojis(event);
+        });
+
+        // Add to Calendar
+        function addToCalendar() {
+            const calendarEvent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wedding Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Dinu George & Edwina Maria Wedding
+X-WR-TIMEZONE:UTC
+BEGIN:VEVENT
+UID:wedding-2026-08-29@dinuedwina.wedding
+DTSTAMP:20260101T000000Z
+DTSTART:20260829T053000Z
+DTEND:20260829T230000Z
+SUMMARY:Dinu George & Edwina Maria Wedding Reception
+LOCATION:St Sebastian's Forane Church, Nedumkandam, Kerala 685553, India
+DESCRIPTION:Join us for the wedding reception of Dinu George and Edwina Maria
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(calendarEvent));
+            element.setAttribute('download', 'dinu-edwina-wedding.ics');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        // Scroll to Venue
+        function scrollToVenue() {
+            document.querySelector('.venue-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Share Invitation
+        function shareInvitation() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Dinu George & Edwina Maria Wedding',
+                    text: 'You are invited to the wedding of Dinu George and Edwina Maria on August 29, 2026',
+                    url: window.location.href
+                });
+            } else {
+                const url = window.location.href;
+                const text = 'Check out this beautiful wedding invitation: ' + url;
+                alert('Share this link:\n\n' + url);
+            }
+        }
+
+        // Navigation highlights
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
