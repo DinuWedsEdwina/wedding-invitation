@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Cormorant Garamond', serif;
-    background-color: var(--light-cream);
+    background-color: #b8cfe5;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -142,7 +142,7 @@ html, body {
 .loading-subtitle {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1em;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     margin-bottom: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -188,7 +188,7 @@ html, body {
 }
 
 .loading-screen p {
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     margin-bottom: 30px;
     font-size: 1em;
     display: none;
@@ -245,7 +245,7 @@ html, body {
     padding: 12px 40px;
     font-size: 1em;
     font-family: 'Playfair Display', serif;
-    color: var(--light-cream);
+    color: white;
     background: linear-gradient(135deg, var(--primary-maroon), var(--secondary-maroon));
     border: 2px solid var(--accent-gold);
     border-radius: 50px;
@@ -330,7 +330,7 @@ html, body {
 .invitation-envelope {
     position: relative;
     width: 100%;
-    background: white;
+    background: #e0ecf7;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(90, 31, 47, 0.25);
@@ -378,14 +378,14 @@ html, body {
 .invite-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.2em;
-    color: var(--light-cream);
+    color: white;
     margin: 10px 0;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .invite-ampersand {
-    color: #ffffff;
+    color: white;
     font-size: 1.6em;
     margin: 12px 0;
     display: block;
@@ -394,7 +394,7 @@ html, body {
 .invitation-text-overlay .divider {
     width: 50px;
     height: 2px;
-    background: #ffffff;
+    background: var(--light-cream);
     margin: 15px auto;
 }
 
@@ -429,7 +429,7 @@ html, body {
 }
 
 .invitation-box p {
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     margin: 15px 0;
     font-size: 0.95em;
 }
@@ -451,7 +451,7 @@ html, body {
 
 .open-btn {
     background-color: var(--primary-maroon);
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     padding: 12px 35px;
     border: none;
     border-radius: 25px;
@@ -473,7 +473,7 @@ html, body {
 /* Header Section */
 .header {
     background: linear-gradient(135deg, var(--secondary-maroon) 0%, var(--primary-maroon) 100%);
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     padding: 60px 20px 80px;
     text-align: center;
     position: relative;
@@ -657,7 +657,7 @@ html, body {
 
 .parent-group .house {
     font-size: 0.85em;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     font-weight: 300;
 }
 
@@ -709,7 +709,7 @@ html, body {
 .parent-group-right .house {
     font-family: 'Cormorant Garamond', serif;
     font-size: 0.8em;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     margin-top: 6px;
     font-weight: 300;
 }
@@ -735,7 +735,7 @@ html, body {
     font-size: 0.85em;
     font-weight: 300;
     letter-spacing: 1.5px;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
 }
 
 .announcement .main-text {
@@ -751,7 +751,7 @@ html, body {
     width: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     margin: 0;
     padding: 0;
 }
@@ -780,7 +780,7 @@ html, body {
 }
 
 .couple-section .couple-info .couple-name {
-    color: var(--light-cream);
+    color: white;
 }
 
 .couple-section .couple-info .couple-details {
@@ -800,7 +800,7 @@ html, body {
 .couple-info .role-label {
     font-size: 0.85em;
     letter-spacing: 1.5px;
-    color: var(--accent-gold);
+    color: white;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 15px;
@@ -812,13 +812,13 @@ html, body {
     font-weight: 700;
     margin: 12px 0 18px 0;
     letter-spacing: 1px;
-    color: var(--primary-maroon);
+    color: white;
 }
 
 .couple-info .couple-details {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.15em;
-    color: var(--text-muted);
+    color: white;
     margin: 10px 0;
     font-weight: 400;
 }
@@ -826,7 +826,7 @@ html, body {
 .couple-info .couple-parents {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.05em;
-    color: var(--text-muted);
+    color: white;
     margin: 10px 0 40px 0;
     font-weight: 400;
     font-style: italic;
@@ -849,7 +849,7 @@ html, body {
     font-size: 0.85em;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -861,7 +861,7 @@ html, body {
     gap: 25px;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    background: white;
+    background: #e0ecf7;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(30, 58, 138, 0.08);
@@ -916,7 +916,7 @@ html, body {
 
 /* Calendar */
 .calendar {
-    background-color: white;
+    background-color: #e0ecf7;
     border-radius: 12px;
     padding: 15px;
     margin: 20px 0;
@@ -1002,7 +1002,7 @@ html, body {
 }
 
 .venue-card {
-    background: white;
+    background: #e0ecf7;
     padding: 30px;
     border-radius: 15px;
     border: 2px solid var(--accent-gold);
@@ -1040,7 +1040,7 @@ html, body {
 
 .venue-link:hover {
     background-color: var(--primary-maroon);
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     transform: translateY(-2px);
 }
 
@@ -1074,7 +1074,7 @@ html, body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-maroon), var(--secondary-maroon));
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     border: 2px solid var(--primary-maroon);
     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);
 }
@@ -1087,7 +1087,7 @@ html, body {
 }
 
 .btn-secondary {
-    background-color: white;
+    background-color: #e0ecf7;
     color: var(--primary-maroon);
     border: 2px solid var(--primary-maroon);
     box-shadow: 0 2px 10px rgba(30, 58, 138, 0.1);
@@ -1095,7 +1095,7 @@ html, body {
 
 .btn-secondary:hover {
     background: linear-gradient(135deg, var(--primary-maroon), var(--secondary-maroon));
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     border-color: var(--accent-gold);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
@@ -1134,7 +1134,7 @@ html, body {
     position: relative;
     width: 280px;
     height: 280px;
-    background: white;
+    background: #e0ecf7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1179,7 +1179,7 @@ html, body {
 }
 
 .qr-code {
-    background: white;
+    background: #e0ecf7;
     padding: 15px;
     max-width: 250px;
     display: flex;
@@ -1225,7 +1225,7 @@ html, body {
 .qr-location-details {
     font-family: 'Cormorant Garamond', serif;
     font-size: 0.95em;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     line-height: 1.8;
     font-weight: 300;
 }
@@ -1273,7 +1273,7 @@ html, body {
 .countdown-label-unit {
     font-family: 'Cormorant Garamond', serif;
     font-size: 0.9em;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 300;
@@ -1287,7 +1287,7 @@ html, body {
     right: 0;
     background: var(--primary-maroon);
     border-top: 2px solid var(--accent-gold);
-    display: flex;
+    display: none;
     justify-content: space-around;
     padding: 12px 0;
     z-index: 999;
@@ -1297,7 +1297,7 @@ html, body {
 .nav-item {
     flex: 1;
     text-align: center;
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     text-decoration: none;
     font-size: 0.8em;
     padding: 8px 0;
@@ -1321,7 +1321,7 @@ html, body {
     padding: 50px 30px;
     border-top: 2px solid rgba(96, 165, 250, 0.2);
     font-size: 0.85em;
-    color: var(--text-muted);
+    color: var(--primary-maroon);
     background: linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.03) 100%);
     max-width: 1200px;
     margin: 0 auto;
@@ -1407,7 +1407,7 @@ html, body {
     border-radius: 50%;
     background: linear-gradient(135deg, #1e3a8a, #2563eb);
     border: 3px solid var(--accent-gold);
-    color: var(--light-cream);
+    color: var(--primary-maroon);
     font-size: 1.6em;
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(30, 58, 138, 0.5);

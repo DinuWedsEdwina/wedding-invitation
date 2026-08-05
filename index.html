@@ -8,6 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Open Graph Meta Tags for WhatsApp & Social Media Sharing -->
+    <meta property="og:title" content="Dinu George & Edwina Maria - Wedding Invitation">
+    <meta property="og:description" content="Join us for the wedding celebration of Dinu George and Edwina Maria on August 29, 2026">
+    <meta property="og:image" content="assets/thumbnail.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dinu George & Edwina Maria - Wedding Invitation">
+    <meta name="twitter:description" content="Join us for the wedding celebration of Dinu George and Edwina Maria on August 29, 2026">
+    <meta name="twitter:image" content="assets/thumbnail.png">
 </head>
 <body>
     <!-- Audio Element for Background Music -->
@@ -333,20 +344,6 @@
             }
         }
 
-        // Random emoji scatter effect
-        function triggerRandomEmojis() {
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            spreadLoveEmojis({ x: x, y: y });
-        }
-
-        // Start random emoji animation when page loads
-        window.addEventListener('load', function() {
-            // Trigger random emojis at random intervals (between 2-5 seconds)
-            setInterval(() => {
-                triggerRandomEmojis();
-            }, Math.random() * 3000 + 2000);
-        });
 
         // Hero card click for emoji effect
         document.querySelector('.hero-card-section')?.addEventListener('click', function(event) {
