@@ -16,9 +16,16 @@
     <!-- Loading Screen -->
     <div id="loadingScreen" class="loading-screen">
         <div class="loading-content">
-            
-            <p class="loading-quote">"Love is not just about finding the right person, it's about being the right person for someone."</p>
-            <button class="open-invitation-btn" onclick="openInvitation()">Open Invitation</button>
+         
+            <div class="loading-card">
+                <div class="loading-couple">
+                    <h2 class="groom-name">Dinu</h2>
+                    <div class="ampersand-divider">&</div>
+                    <h2 class="bride-name">Edwina</h2>
+                </div>
+                   <button class="open-invitation-btn" onclick="openInvitation()">Open Invitation</button>
+                <p class="loading-quote">"Two souls, one heart, forever intertwined."</p>
+            </div>
         </div>
     </div>
 
@@ -50,7 +57,7 @@
         <!-- Ceremony Section -->
         <div class="section">
             <p style="text-align: center; color: var(--primary-maroon); font-family: 'Cormorant Garamond', serif; font-size: 1.2em; font-style: italic; margin-bottom: 40px; font-weight: 300;">\"A great marriage is not when the perfect couple comes together. It is when an imperfect couple learns to enjoy their differences.\"</p>
-            <div class="section-title">Ceremony <span class="accent">Information</span></div>
+            <div class="section-title">Proud <span class="accent">Parents</span></div>
 
             <div class="parents-grid-new">
                 <div class="parent-group-left">
@@ -72,28 +79,33 @@
                 <p>WITH JOYFUL HEARTS</p>
                 <p class="main-text">WE ANNOUNCE OUR WEDDING</p>
             </div>
+        </div>
 
-            <div class="couple-info">
-                <div class="role-label">The Groom</div>
-                <div class="couple-name">Dinu George</div>
-                <div class="couple-details">Muhalayil house</div>
-                <div class="couple-parents">S/O George Kurian and Sherly George</div>
-            </div>
+        <!-- Couple Section with Background Image -->
+        <div class="couple-section" style="background-image: url('assets/img2.jpg');">
+            <div class="couple-section-overlay"></div>
+            <div class="section couple-content">
+                <div class="couple-info">
+                    <div class="role-label">The Groom</div>
+                    <div class="couple-name">Dinu George</div>
+                    <div class="couple-details">Muhalayil house</div>
+                    <div class="couple-parents">S/O George Kurian and Sherly George</div>
+                </div>
 
-            <div style="text-align: center; color: var(--primary-maroon); margin: 30px 0; font-size: 1.5em; font-weight: 300;">&</div>
+                <div style="text-align: center; color: var(--light-cream); margin: 30px 0; font-size: 1.5em; font-weight: 300;">&</div>
 
-            <div class="couple-info">
-                <div class="role-label">The Bride</div>
-                <div class="couple-name">Edwina Maria</div>
-                <div class="couple-details">Chullickal house</div>
-                <div class="couple-parents">D/O Raphael Cicil and Shaini Varghese</div>
+                <div class="couple-info">
+                    <div class="role-label">The Bride</div>
+                    <div class="couple-name">Edwina Maria</div>
+                    <div class="couple-details">Chullickal house</div>
+                    <div class="couple-parents">D/O Raphael Cicil and Shaini Varghese</div>
+                </div>
             </div>
         </div>
 
-        <!-- Second Image -->
-        <div class="hero-image">
-            <img id="secondImg" src="assets/img2.jpg" alt="Wedding moments">
-        </div>
+        <div class="section">
+
+
 
         <!-- Reception/Date Section -->
         <div class="section">
@@ -206,38 +218,18 @@
                         India
                     </div>
                     <a href="https://maps.app.goo.gl/qwuZmG6oWex9X3ry5" target="_blank" class="venue-link">View on Maps</a>
+                                <!-- Map Section -->
+                <div class="map-section">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.4652485656953!2d76.7194!3d10.0833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d82d7d4d4d5%3A0x5d4c5b8c5b8c5b8c!2sSt%20Sebastian's%20Forane%20Church!5e0!3m2!1sen!2sin!4v1692518400000"
+                            width="100%" height="150" style="border:0; border-radius: 15px; box-shadow: 0 5px 15px rgba(90, 31, 47, 0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                </div>
+
             </div>
 
             <!-- Action Buttons -->
             <div class="button-group" style="display: none;">
                 <button class="btn btn-secondary" onclick="addToCalendar()">Add to Calendar</button>
-            </div>
-        </div>
-
-        <!-- QR Code Scanner Section -->
-        <div class="qr-section">
-            <div class="section-title">Share The <span class="accent">Love</span></div>
-            <p class="qr-subtitle">"Marriage is a journey together, share the joy with those you love."</p>
-            <div class="scanner-container">
-                <div class="scanner-frame">
-                    <div class="scanner-corner scanner-corner-tl"></div>
-                    <div class="scanner-corner scanner-corner-tr"></div>
-                    <div class="scanner-corner scanner-corner-bl"></div>
-                    <div class="scanner-corner scanner-corner-br"></div>
-                    <div class="qr-code">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.google.com/?q=St%20Sebastian's%20Forane%20Church%20Nedumkandam%20Kerala%20685553" alt="QR Code - Venue Location" />
-                    </div>
-                </div>
-                <p class="scanner-text">Scan to get the location</p>
-                <div class="qr-location">
-                    <div class="qr-location-title">Venue Location</div>
-                    <div class="qr-location-details">
-                        St Sebastian's Forane Church<br>
-                        Nedumkandam, Kerala 685553<br>
-                        India
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -315,9 +307,9 @@
         function spreadLoveEmojis(event) {
             const emojis = ['❤️', '💕', '💖', '💗', '💝'];
 
-            // Get click position
-            const x = event.clientX;
-            const y = event.clientY;
+            // Get position (either from click event or coordinates object)
+            const x = event.clientX !== undefined ? event.clientX : event.x;
+            const y = event.clientY !== undefined ? event.clientY : event.y;
 
             // Create multiple emojis
             for (let i = 0; i < 8; i++) {
@@ -340,6 +332,21 @@
                 setTimeout(() => emoji.remove(), 1500);
             }
         }
+
+        // Random emoji scatter effect
+        function triggerRandomEmojis() {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            spreadLoveEmojis({ x: x, y: y });
+        }
+
+        // Start random emoji animation when page loads
+        window.addEventListener('load', function() {
+            // Trigger random emojis at random intervals (between 2-5 seconds)
+            setInterval(() => {
+                triggerRandomEmojis();
+            }, Math.random() * 3000 + 2000);
+        });
 
         // Hero card click for emoji effect
         document.querySelector('.hero-card-section')?.addEventListener('click', function(event) {
@@ -420,6 +427,29 @@ END:VCALENDAR`;
                 document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
                 this.classList.add('active');
             });
+        });
+
+        // Scroll Animation for Couple Names
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add delay to stagger animations
+                    setTimeout(() => {
+                        entry.target.classList.add('animate-on-scroll');
+                    }, index * 150);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe couple info sections
+        document.querySelectorAll('.couple-info').forEach(element => {
+            observer.observe(element);
         });
     </script>
 </body>
