@@ -39,10 +39,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(240, 244, 248, 0.65) 0%, rgba(232, 240, 247, 0.60) 50%, rgba(220, 232, 245, 0.65) 100%), url('assets/loadingscreen-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: #5E0000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,10 +67,11 @@ html, body {
 .loading-content {
     text-align: center;
     padding: 40px 20px;
-    max-width: 500px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .loading-card {
@@ -89,7 +87,7 @@ html, body {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     font-weight: 700;
-    color: var(--primary-maroon);
+    color: #5E0000;
     margin: 0 0 20px 0;
     letter-spacing: 1px;
 }
@@ -98,7 +96,7 @@ html, body {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     font-weight: 700;
-    color: var(--primary-maroon);
+    color: #5E0000;
     margin: 20px 0 0 0;
     letter-spacing: 1px;
 }
@@ -107,7 +105,7 @@ html, body {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
     font-weight: 400;
-    color: var(--accent-gold);
+    color: #5E0000;
     margin: 15px 0;
     line-height: 1;
     opacity: 0.8;
@@ -246,14 +244,14 @@ html, body {
     font-size: 1em;
     font-family: 'Playfair Display', serif;
     color: white;
-    background: linear-gradient(135deg, var(--primary-maroon), var(--secondary-maroon));
-    border: 2px solid var(--accent-gold);
+    background: #5E0000;
+    border: 2px solid white;
     border-radius: 50px;
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    box-shadow: 0 4px 15px rgba(94, 0, 0, 0.5);
     animation: blink 1.5s ease-in-out infinite;
 }
 
@@ -270,8 +268,8 @@ html, body {
 
 .open-invitation-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.5);
-    background: linear-gradient(135deg, var(--secondary-maroon), var(--primary-maroon));
+    box-shadow: 0 6px 20px rgba(94, 0, 0, 0.7);
+    background: #4a0000;
 }
 
 .open-invitation-btn:active {
@@ -1443,11 +1441,219 @@ html, body {
     }
 }
 
+/* Flower Decorations */
+.flower-decoration {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.flower-decoration img {
+    width: 150%;
+    height: 120%;
+    object-fit: contain;
+    opacity: 0.90;
+    filter: drop-shadow(0 4px 8px rgba(28, 74, 227, 0.2));
+    animation: flowerFloat 4s ease-in-out infinite;
+}
+
+.flower-top-right {
+    bottom: -60px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    z-index: 0;
+    transform: rotate(-170deg);
+}
+
+.flower-bottom-left {
+    bottom: -60px;
+    left: -60px;
+    width: 320px;
+    height: 320px;
+    z-index: 0;
+    transform: rotate(10deg);
+}
+
+@keyframes flowerFloat {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-8px);
+    }
+}
+
+/* New Loading Screen Styles */
+.loading-card {
+    position: relative;
+    background: var(--light-cream);
+    border-radius: 20px;
+    padding: 80px 50px;
+    box-shadow: 0 20px 60px rgba(28, 74, 227, 0.3);
+    max-width: 800px;
+    width: 90%;
+    overflow: hidden;
+}
+
+
+
+
+
+.heart-circle {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background: #5E0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.heart-circle .heart {
+    font-size: 3.5em;
+    color: white;
+    display: inline-block;
+    animation: heartbeat 1.2s ease-in-out infinite;
+    clip-path: none;
+    width: auto;
+    height: auto;
+    background: none;
+}
+
+.loading-couple {
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.loading-couple .groom-name,
+.loading-couple .bride-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3em;
+    color: #5E0000;
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.loading-couple .ampersand-divider {
+    font-size: 1.7em;
+    color: #8B1A1A;
+    margin: 2px 0;
+    line-height: 1;
+}
+
+.decorative-line {
+    text-align: center;
+    font-size: 1.4em;
+    color: #5E0000;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.loading-date {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8em;
+    color: #5E0000;
+    margin: 25px 0 10px 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.loading-invite-text {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9em;
+    color: #5E0000;
+    margin: 10px 0 30px 0;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.open-invitation-btn {
+    position: relative;
+    z-index: 1;
+    margin-top: 25px;
+}
+
 /* Mobile Responsive */
 @media (max-width: 640px) {
+    .loading-content {
+        max-width: 100%;
+        padding: 20px 10px;
+    }
+
     .loading-card {
-        padding: 35px 25px;
+        max-width: 100%;
+        width: 95%;
+        padding: 30px 20px;
         margin-bottom: 30px;
+    }
+
+    .flower-decoration {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .flower-top-right {
+        top: -50px !important;
+        right: -50px !important;
+    }
+
+    .flower-bottom-left {
+        bottom: -50px !important;
+        left: -50px !important;
+    }
+
+    .heart-circle .heart {
+        font-size: 1.8em;
+    }
+
+    .loading-couple .groom-name,
+    .loading-couple .bride-name {
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+
+    .loading-couple .ampersand-divider {
+        font-size: 1.1em;
+        margin: 1px 0;
+    }
+
+    .decorative-line {
+        font-size: 0.85em;
+        margin: 5px 0;
+    }
+
+    .loading-date {
+        font-size: 0.85em;
+        margin: 5px 0;
+    }
+
+    .loading-invite-text {
+        font-size: 0.95em;
+        margin: 8px 0;
     }
 
     .groom-name,
