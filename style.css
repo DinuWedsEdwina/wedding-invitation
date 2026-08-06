@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 :root {
     --primary-maroon: #1C4AE3;
     --secondary-maroon: #1A3275;
@@ -41,12 +39,58 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #5E0000;
+    background:
+        radial-gradient(circle at 10% 30%, rgba(255, 150, 150, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 70%, rgba(200, 50, 50, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(255, 200, 200, 0.08) 0%, transparent 60%),
+        linear-gradient(135deg, #5E0000 0%, #3a0000 50%, #1a0000 100%),
+        linear-gradient(45deg, transparent 30%, rgba(0, 0, 0, 0.1) 50%, transparent 70%);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3000;
     transition: opacity 0.5s ease-out;
+    overflow: hidden;
+}
+
+.loading-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px),
+        repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255, 200, 200, 0.02) 15px, rgba(255, 200, 200, 0.02) 30px),
+        repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(0, 0, 0, 0.04) 15px, rgba(0, 0, 0, 0.04) 30px);
+    pointer-events: none;
+    z-index: 0;
+    animation: shimmer 8s infinite alternate;
+}
+
+.loading-screen::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -15%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 100, 100, 0.15) 0%, rgba(255, 150, 100, 0.08) 40%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(40px);
+}
+
+@keyframes shimmer {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .loading-screen.hidden {
@@ -74,6 +118,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .loading-card {
