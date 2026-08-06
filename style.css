@@ -51,6 +51,16 @@ html, body {
     z-index: 3000;
     transition: opacity 0.5s ease-out;
     overflow: hidden;
+    animation: romanticBreathe 10s ease-in-out infinite;
+}
+
+@keyframes romanticBreathe {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.08);
+    }
 }
 
 .loading-screen::before {
@@ -61,36 +71,161 @@ html, body {
     right: 0;
     bottom: 0;
     background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px),
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.05) 2px, rgba(255, 255, 255, 0.05) 4px),
-        repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255, 200, 200, 0.02) 15px, rgba(255, 200, 200, 0.02) 30px),
-        repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(0, 0, 0, 0.04) 15px, rgba(0, 0, 0, 0.04) 30px);
+        radial-gradient(circle at 15% 25%, rgba(255, 200, 200, 0.15) 0%, transparent 15%),
+        radial-gradient(circle at 85% 35%, rgba(255, 180, 150, 0.1) 0%, transparent 12%),
+        radial-gradient(circle at 20% 75%, rgba(255, 150, 150, 0.08) 0%, transparent 14%),
+        radial-gradient(circle at 90% 80%, rgba(255, 200, 180, 0.1) 0%, transparent 16%),
+        repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255, 255, 255, 0.03) 1px, rgba(255, 255, 255, 0.03) 2px),
+        repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255, 255, 255, 0.03) 1px, rgba(255, 255, 255, 0.03) 2px);
     pointer-events: none;
     z-index: 0;
-    animation: shimmer 8s infinite alternate;
+    animation: gentleShimmer 12s ease-in-out infinite;
+}
+
+@keyframes gentleShimmer {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
 }
 
 .loading-screen::after {
     content: '';
     position: absolute;
-    top: -40%;
-    right: -15%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 100, 100, 0.15) 0%, rgba(255, 150, 100, 0.08) 40%, transparent 70%);
+    top: -50%;
+    right: -25%;
+    width: 900px;
+    height: 900px;
+    background:
+        radial-gradient(circle, rgba(255, 100, 100, 0.2) 0%, rgba(255, 150, 100, 0.1) 30%, rgba(255, 200, 150, 0.05) 60%, transparent 80%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
-    filter: blur(40px);
+    filter: blur(60px);
+    animation: softGlow 8s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1) translateY(-20px);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.05) translateY(10px);
+    }
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 @keyframes shimmer {
+    0%, 100% {
+        opacity: 0.5;
+        filter: brightness(0.9);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.2);
+    }
+}
+
+@keyframes subtle-glow {
+    0%, 100% {
+        filter: brightness(0.6);
+    }
+    50% {
+        filter: brightness(1.1);
+    }
+}
+
+@keyframes falling {
     0% {
-        opacity: 0.8;
+        transform: translateY(-100vh) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
     }
     100% {
-        opacity: 1;
+        transform: translateY(100vh) translateX(100px);
+        opacity: 0;
     }
+}
+
+/* Falling Hearts */
+.falling-heart {
+    position: absolute;
+    font-size: 1.5em;
+    color: rgba(255, 100, 100, 0.4);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.falling-heart:nth-child(1) {
+    left: 10%;
+    animation: falling 8s infinite ease-in;
+}
+
+.falling-heart:nth-child(2) {
+    left: 20%;
+    animation: falling 10s infinite ease-in;
+    animation-delay: 1s;
+}
+
+.falling-heart:nth-child(3) {
+    left: 30%;
+    animation: falling 9s infinite ease-in;
+    animation-delay: 2s;
+}
+
+.falling-heart:nth-child(4) {
+    left: 40%;
+    animation: falling 11s infinite ease-in;
+    animation-delay: 1.5s;
+}
+
+.falling-heart:nth-child(5) {
+    left: 50%;
+    animation: falling 10s infinite ease-in;
+    animation-delay: 2.5s;
+}
+
+.falling-heart:nth-child(6) {
+    left: 60%;
+    animation: falling 8.5s infinite ease-in;
+    animation-delay: 0.5s;
+}
+
+.falling-heart:nth-child(7) {
+    left: 70%;
+    animation: falling 9.5s infinite ease-in;
+    animation-delay: 3s;
+}
+
+.falling-heart:nth-child(8) {
+    left: 80%;
+    animation: falling 10.5s infinite ease-in;
+    animation-delay: 1.2s;
+}
+
+.falling-heart:nth-child(9) {
+    left: 90%;
+    animation: falling 9s infinite ease-in;
+    animation-delay: 2.8s;
 }
 
 .loading-screen.hidden {
